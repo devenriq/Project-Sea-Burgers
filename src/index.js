@@ -1,4 +1,10 @@
-//lis of burgers
+// taking the elements in html
+const burgerGridContainer = document.querySelector("#list-burgers");
+const addBurgerButton = document.querySelector("#add-burger-button");
+const modalContainer = document.querySelector("#modal-container");
+const buttonSend = document.querySelector("#button-send");
+
+// List of burgers
 const listOfBurgers = [
   {
     name: "burger",
@@ -35,13 +41,19 @@ const listOfBurgers = [
   },
 ];
 
-//taking the elements in html
-const burgerGridContainer = document.querySelector("#list-burgers");
-
-const addBurgerButton = document.querySelector("#add-burger-button");
+//Create burgers
+class CreateBurger {
+  constructor(name, description, image, price, punctuation) {
+    this.name = name;
+    this.description = description;
+    this.price = price;
+    this.image = image;
+    this.punctuation = punctuation;
+  }
+}
 
 // Showing the burgers in the layout
-const createBurgers = () => {
+const showBurgers = () => {
   listOfBurgers.forEach((burger) => {
     const stars = () => {
       return Math.floor(burger.punctuation);
@@ -67,10 +79,36 @@ const createBurgers = () => {
   });
 };
 
-const hola = () => {
-  alert("hola");
+// Creating a new burger
+const createNewBurger = (e) => {
+  e.preventDefault();
+  const formName = document.querySelector("#form-name"),
+    formBurgerName = document.querySelector("#form-burger-name"),
+    formBurgerPrice = document.querySelector("#form-burger-price"),
+    formBurgerDescription = document.querySelector("#form-burger-description");
+
+  const burger = new CreateBurger(
+    formName.value,
+    formBurgerName.value,
+    formBurgerDescription.value,
+    formBurgerPrice.value
+  );
+  listOfBurgers.unshift(burger);
+  showBurgers();
 };
 
-addBurgerButton.addEventListener("click", hola);
+// Modal section
+const openModal = () => {
+  modalContainer.classList.remove("hidden");
+};
 
-createBurgers();
+const closeModal = () => {
+  modalContainer.classList.add("hidden");
+};
+
+addBurgerButton.addEventListener("click", openModal);
+buttonSend.addEventListener("click", closeModal);
+buttonSend.addEventListener("click", createNewBurger);
+// Launching the functions
+
+// showBurgers();

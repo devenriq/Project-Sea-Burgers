@@ -60,53 +60,75 @@
 
       <!-- Modal section -->
       <div
-        class="modal-container fixed top-0 left-0 w-full h-full items-center z-10 bg-gray-900/80 "
+        class="modal-container hidden flex fixed top-0 left-0 w-full h-full items-center z-10 bg-gray-900/80 "
         id="modal-container"
       >
-        <div class="modal mt-8 my-46 container py-8 px-4 mx-auto bg-white rounded-lg">
+        <div class="modal mt-8 my-46 container py-6 px-4 mx-auto  bg-white rounded-lg">
           <div class=" ">
             <div
               id="personal-information"
-              class="grid gl:grid-cols-2 md:grid-cols-2"
+              class="grid gl:grid-cols-2 md:grid-cols-2 gap-6 "
             >
               <div>
                 <div>Name</div>
                 <input
                   class="form-control form-control:focus form-control:hover"
+                  id="form-name"
                   type="text"
                   placeholder="Type your name"
+                  required
                 />
               </div>
               <div>
                 <div>Email</div>
                 <input
                   class="form-control form-control:focus form-control:hover"
+                  id="form-email"
                   type="email"
                   placeholder="Type your email"
+                  required
                 />
               </div>
             </div>
-            <div id="new-burger-info" class="new-burger-info ">
+            <div
+            id="new-burger-info"
+            class="new-burger-info pt-3 grid gl:grid-cols-2 md:grid-cols-2 gap-6">
               <div>
                 <div>Burger's name</div>
                 <input
-                  class="form-control form-control:focus form-control:hover"
+                  class="form-control form-control:focus form-control:hover pt"
+                  id="form-burger-name"
                   type="text"
                   placeholder="Type your new burger's name"
+                  required
                 />
               </div>
               <div>
-                <div>Tell us more about your burger</div>
+                <div>Burger's price</div>
+                <input
+                  class="form-control form-control:focus form-control:hover pt"
+                  id="form-burger-price"
+                  type="text"
+                  placeholder="Type your new burger's name"
+                  required
+                />
+              </div>
+
+
+            </div>
+            <div>
+              <div class="pt-3">
+                <div>Tell us the description of your burger</div>
                 <textarea
                   class="form-control"
                   name=""
-                  id=""
+                  id="form-burger-description"
                   cols="30"
                   rows="10"
                 ></textarea>
               </div>
             </div>
-              <button class="btn btn-primary mx-auto">Enviar</button>
+              <button type="submit" id="button-send" class="btn btn-primary mx-auto">Submit</button>
             </div>
           </div>
         </div>
