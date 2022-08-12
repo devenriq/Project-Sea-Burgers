@@ -36,41 +36,41 @@ const listOfBurgers = [
 ];
 
 //taking the elements in html
-const burgerGridContainer = document.querySelector(".burger-grid-container");
-const burgerContainer = document.querySelector(".burger-container");
-const burgerName = document.querySelector(".burger-name");
-const burgerDescription = document.querySelector(".burger-description");
-const burgerPrice = document.querySelector(".burger-price");
-const burgerPunctuation = document.querySelector(".burger-punctuation");
+const burgerGridContainer = document.querySelector("#list-burgers");
 
 const addBurgerButton = document.querySelector("#add-burger-button");
-const buttonTest = document.querySelector(".button");
 
 // Showing the burgers in the layout
-listOfBurgers.forEach((burger) => {
-  const stars = () => {
-    return Math.floor(burger.punctuation);
-  };
+const createBurgers = () => {
+  listOfBurgers.forEach((burger) => {
+    const stars = () => {
+      return Math.floor(burger.punctuation);
+    };
 
-  newBurger = `
-    <div class="burger-container" >
-      <div>
-        <img src="${burger.image}" alt="A burger picture"
-          class="burger-image"
-        >
+    newBurger = `
+      <div class="burger-container" >
+        <div>
+          <img src="${burger.image}" alt="A burger picture"
+            class="burger-image"
+          >
+        </div>
+        <div class="px-2 rounded-lg md:rounded-l-none">
+          <h2 class="burger-name">${burger.name} </h2>
+          <p class=" burger-description">${burger.description}</p>
+          <div class=" burger-price">${burger.price}</div>
+          <div class=" burger-punctuation">${burger.punctuation}</div>
+        </div>
       </div>
-      <div class="px-2 rounded-lg md:rounded-l-none">
-        <h2 class="burger-name">${burger.name} </h2>
-        <p class=" burger-description">${burger.description}</p>
-        <div class=" burger-price">${burger.price}</div>
-        <div class=" burger-punctuation">${burger.punctuation}</div>
-      </div>
-    </div>
 
-  `;
-  burgerGridContainer.innerHTML += newBurger;
-});
+    `;
+    burgerGridContainer.innerHTML += newBurger;
+  });
+};
 
 const hola = () => {
   alert("hola");
 };
+
+addBurgerButton.addEventListener("click", hola);
+
+createBurgers();

@@ -26,40 +26,113 @@
         "
       ></div>
 
-      <!-- hamburgers section -->
-      <div class="burger-grid-container grid md:grid-cols-2 lg:grid-cols-3 gap-4 container mx-auto  flex-wrap py-8 ">
-          <!-- Add burger button -->
-          <div class="burger-container" id="add-burger-button">
-          <div >
-            <img src="./img/plus image.png" alt="A hamburg picture"
-              class="burger-image"
-            >
-          </div>
-          <div class="px-2 rounded-lg md:rounded-l-none">
-            <h2 class="burger-name">Add your own burger!</h2>
-            <p class="burger-description">Complete all the fields and win the competition "the bestburger idea"!</p>
-            <button class="relative  px-2" id="add-burger-button">Click here!</button>
+      <!-- burgers section -->
+      <!-- burgers container -->
+      <div class="burger-grid-container">
+        <div
+          class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 container mx-auto flex-wrap py-8"
+          id="list-burgers"
+        ></div>
+
+        <!-- Add burger button -->
+        <div id="add-burger-button" class="burger-container h-46 w-full flex">
+          <div class="burger-container container w-full mx-auto justify-center">
+            <div>
+              <img
+                src="./img/plus image.png"
+                alt="A burger picture"
+                class="burger-image"
+              />
+            </div>
+            <div class="px-2 rounded-lg md:rounded-l-none">
+              <h2 class="burger-name">Add your own burger!</h2>
+              <p class="burger-description">
+                Complete all the fields and win the competition "the best burger
+                idea"!
+              </p>
+              <button class="relative px-2" id="add-burger-button">
+                Click here!
+              </button>
+            </div>
           </div>
         </div>
+      </div>
 
-        <!-- First Hamburger -->
-        <!-- <div class="burger-container" >
-          <div>
-            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=500&q=80 " alt="A hamburg picture"
-              class="burger-image"
+      <!-- Modal section -->
+      <div
+        class="modal-container fixed top-0 left-0 w-full h-full items-center z-10 bg-gray-900/80 "
+        id="modal-container"
+      >
+        <div class="modal mt-8 my-46 container py-8 px-4 mx-auto bg-white rounded-lg">
+          <div class=" ">
+            <div
+              id="personal-information"
+              class="grid gl:grid-cols-2 md:grid-cols-2"
             >
+              <div>
+                <div>Name</div>
+                <input
+                  class="form-control form-control:focus form-control:hover"
+                  type="text"
+                  placeholder="Type your name"
+                />
+              </div>
+              <div>
+                <div>Email</div>
+                <input
+                  class="form-control form-control:focus form-control:hover"
+                  type="email"
+                  placeholder="Type your email"
+                />
+              </div>
+            </div>
+            <div id="new-burger-info" class="new-burger-info ">
+              <div>
+                <div>Burger's name</div>
+                <input
+                  class="form-control form-control:focus form-control:hover"
+                  type="text"
+                  placeholder="Type your new burger's name"
+                />
+              </div>
+              <div>
+                <div>Tell us more about your burger</div>
+                <textarea
+                  class="form-control"
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="10"
+                ></textarea>
+              </div>
+            </div>
+              <button class="btn btn-primary mx-auto">Enviar</button>
+            </div>
           </div>
-          <div class="px-2 rounded-lg md:rounded-l-none">
-            <h2 class="burger-name">Simple Hamburger</h2>
-            <p class="burger-description">This is a simple hamburg with fresh ingredients</p>
-            <div class="burger-price ">$43</div>
-            <div class="burger-punctuation ">&starf;&starf;&starf;&starf;&starf;</div>
+        </div>
+      </div>
+    </main>
+    <footer class="w-full bg-secondary text-white">
+      <div class="md:flex md:justify-around">
+        <div class="ml-8 mt-4">
+          <div class="hover:text-primary">
+            <i class="fa fa-facebook"></i> Facebook
           </div>
-        </div> -->
-
-
-
-      </main>
-    </body>
-    <script defer src="./index.js"></script>
+          <div class="hover:text-primary">
+            <i class="fa fa-twitter"></i> Twitter
+          </div>
+          <div class="hover:text-primary">
+            <i class="fa fa-instagram"></i> Instagram
+          </div>
+        </div>
+        <ul class="ml-8 mt-4 md:list-disc">
+          <li>Soporte</li>
+          <li>Acerca de nosotros</li>
+          <li>Registro</li>
+          <li>Aviso Privacidad</li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+  <script defer src="./index.js"></script>
 </html>
