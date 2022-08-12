@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.burger-container{
+  @apply mx-2 md:flex shadow-md rounded-lg
+}
+
+.burger-image {
+  @apply rounded-lg md:rounded-r-none md:w-80 md:h-full object-cover
+}
+
+.burger-name{
+  @apply font-semibold uppercase text-gray-800 md:text-lg
+}
+
+.burger-description{
+  @apply text-justify mt-2 text-gray-700 leading-snug md:bg-transparent
+}
+
+.burger-price{
+  @apply mt-2 text-sm font-semibold text-gray-700
+}
+
+.burger-punctuation {
+  @apply relative lg:mb-2 text-yellow-400
+}
