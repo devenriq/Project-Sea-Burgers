@@ -6,8 +6,12 @@
   @apply mx-2 md:flex shadow-md rounded-lg
 }
 
+.burger-creator{
+  @apply text-gray-700 md:text-sm italic
+}
+
 .burger-image {
-  @apply rounded-lg md:rounded-r-none md:w-80 md:h-full object-cover
+  @apply rounded-lg md:rounded-r-none md:w-80 md:h-48 object-cover
 }
 
 .burger-name{

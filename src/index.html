@@ -27,6 +27,7 @@
       ></div>
 
       <!-- burgers section -->
+
       <!-- burgers container -->
       <div class="burger-grid-container">
         <div
@@ -35,22 +36,23 @@
         ></div>
 
         <!-- Add burger button -->
-        <div id="add-burger-button" class="burger-container h-46 w-full flex">
-          <div class="burger-container container w-full mx-auto justify-center">
-            <div>
+        <div class="burger-container h-46 w-full flex justify-center">
+          <div class="burger-container container w-full mx-auto ">
+            <div class="md:w-1/2">
               <img
                 src="./img/plus image.png"
                 alt="A burger picture"
-                class="burger-image"
+                class="rounded-lg md:rounded-r-none md:w-80 md:h-48 object-contain"
               />
             </div>
-            <div class="px-2 rounded-lg md:rounded-l-none">
+            <div class="rounded-lg flex flex-col justify-evenly md:w-1/2 px-2  md:rounded-l-none ">
               <h2 class="burger-name">Add your own burger!</h2>
               <p class="burger-description">
                 Complete all the fields and win the competition "the best burger
-                idea"!
+                idea"!. The best idea will receives a golden ticket to spend in our
+                restaurants for a value of $100
               </p>
-              <button class="relative px-2" id="add-burger-button">
+              <button class="px-2 btn-primary mx-auto btn" id="add-burger-button">
                 Click here!
               </button>
             </div>
@@ -113,8 +115,18 @@
                   required
                 />
               </div>
-
-
+            </div>
+            <div>
+              <div class="pt-3">
+                <div>Tell us the description of your burger</div>
+                <input
+                class="form-control form-control:focus form-control:hover pt"
+                id="form-burger-image"
+                type="text"
+                placeholder="Type de URL of your image"
+                required
+                />
+              </div>
             </div>
             <div>
               <div class="pt-3">
@@ -127,8 +139,11 @@
                   rows="10"
                 ></textarea>
               </div>
-            </div>
+            </div >
+            <div class="flex w-48  mx-auto">
               <button type="submit" id="button-send" class="btn btn-primary mx-auto">Submit</button>
+              <button type="submit" id="button-cancel" class="btn btn-secondary mx-auto">Cancel</button>
+            </div>
             </div>
           </div>
         </div>
@@ -158,3 +173,5 @@
   </body>
   <script defer src="./index.js"></script>
 </html>
+
+
