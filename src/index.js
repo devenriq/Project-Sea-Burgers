@@ -6,7 +6,6 @@ const buttonSend = document.querySelector("#button-send");
 const buttonCancel = document.querySelector("#button-cancel");
 
 // List of burgers
-
 const listOfBurgers = [
   {
     name: "burger",
@@ -125,19 +124,17 @@ const createNewBurger = (e) => {
 
 //Convert into transaction object
 const convertTransactionObject = () => {
-  const formName = document.querySelector("#form-name").value,
-    formBurgerName = document.querySelector("#form-burger-name").value,
-    formBurgerPrice = document.querySelector("#form-burger-price").value,
-    formBurgerDescription = document.querySelector(
-      "#form-burger-description"
-    ).value,
-    formBurgerImage = document.querySelector("#form-burger-image").value;
+  const userName = document.querySelector("#form-name").value,
+    name = document.querySelector("#form-burger-name").value,
+    price = document.querySelector("#form-burger-price").value,
+    description = document.querySelector("#form-burger-description").value,
+    image = document.querySelector("#form-burger-image").value;
   return {
-    formName,
-    formBurgerName,
-    formBurgerPrice,
-    formBurgerDescription,
-    formBurgerImage,
+    userName,
+    name,
+    price,
+    description,
+    image,
   };
 };
 
@@ -165,6 +162,12 @@ buttonCancel.addEventListener("click", closeModal);
 buttonSend.addEventListener("click", createNewBurger);
 buttonSend.addEventListener("click", convertTransactionObject);
 buttonSend.addEventListener("click", saveTransactionObj);
+document.addEventListener("DOMContentLoaded", (e) => {
+  let transactionObjArr = JSON.parse(localStorage.getItem("dataBurger")) || [];
+  transactionObjArr.forEach((dataBurger) => {
+    showNewBurgers(dataBurger);
+  });
+});
 // Launching the functions
 
 showBurgers();
