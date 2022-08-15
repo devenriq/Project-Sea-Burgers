@@ -167,3 +167,5 @@ document.addEventListener("DOMContentLoaded", preserveDom);
 // Launching the functions
 
 showBurgers();
+showBurgers();
+showBurgers();
