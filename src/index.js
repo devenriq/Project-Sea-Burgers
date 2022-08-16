@@ -165,7 +165,4 @@ buttonSend.addEventListener("click", convertTransactionObject);
 buttonSend.addEventListener("click", saveTransactionObj);
 document.addEventListener("DOMContentLoaded", preserveDom);
 // Launching the functions
-
-showBurgers();
-showBurgers();
 showBurgers();
