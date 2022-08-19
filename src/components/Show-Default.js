@@ -1,4 +1,4 @@
-import { listOfBurgers } from "./List-Burgers.js";
+import { listOfBurgers } from "./DB.js";
 const listBurgers = document.querySelector("#list-burgers");
 
 // Showing the burgers in the layout

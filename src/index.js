@@ -1,5 +1,5 @@
 // Importing elements to work with
-import { listOfBurgers } from "./components/List-Burgers.js";
+import { listOfBurgers } from "./components/DB.js";
 import { showBurgers } from "./components/Show-Default.js";
 import {
   CreateNewBurger,
