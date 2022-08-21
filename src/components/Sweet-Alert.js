@@ -1,9 +1,9 @@
 // import Swal from "sweetalert2";
 
-(async () => {
+export const formAlert = async () => {
   const { value: input } = await Swal.fire({
-    title: "How many burgers you want?",
-    text: "You added a burger to your card",
+    title: "How many burgers do you want?",
+    text: "Please, enter the quantity of burgers you wanna buy",
     icon: "question",
     input: "number",
     confirmButtonText: "Continue",
@@ -15,4 +15,4 @@
       title: `You added ${input} burgers!`,
     });
   }
-})();
+};

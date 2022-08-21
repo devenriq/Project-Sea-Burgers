@@ -10,6 +10,7 @@ import {
   convertTransactionObject,
   saveTransactionObj,
 } from "./components/Storage-Management.js";
+import { formAlert } from "./components/Sweet-Alert.js";
 
 // taking the elements in html
 const listBurgers = document.querySelector("#list-burgers");
