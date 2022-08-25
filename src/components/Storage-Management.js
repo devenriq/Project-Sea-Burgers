@@ -16,8 +16,27 @@ export const convertTransactionObject = () => {
 
 // Save in localStorage
 export const saveTransactionObj = (obj) => {
+  /*
+  defino un array. Si hay información en el objeto del local storage "dataBurger", lo parsea (lo
+  convierte en código de JS). Si no, crea un array vacío que será manipulado más adelante
+  */
   let transactionArray = JSON.parse(localStorage.getItem("dataBurger")) || [];
+
+  /*
+  Se añaden los datos necesarios para construir el objeto que se quiere renderizar mediante un
+  .push (considerar que es un método para arrays)
+  */
   transactionArray.push(convertTransactionObject());
+
+  /*
+  Se convierte el array inicial a formato JSON para que pueda ser almacenado en el storage. Se hace
+  usando .stringify
+  */
   let returnTransactionArray = JSON.stringify(transactionArray);
+
+  /*
+  Se captura el valor guardado en el paso anterior y se almacena en el local storage. Para mostrarlo,
+  en el DOM hace falta una función que tenga ese propósito
+  */
   localStorage.setItem("dataBurger", returnTransactionArray);
 };
