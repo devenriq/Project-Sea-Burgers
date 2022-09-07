@@ -82,3 +82,5 @@ export const showBurgers = () => {
     }, 2000);
   });
 };
+
+console.log("hola");
